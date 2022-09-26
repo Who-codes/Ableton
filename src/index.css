@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,500&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --clr-yellow: #fbffa7;
+  --clr-orange: #ff764d;
+  --clr-blue-lite: #b1c5ff;
+  --clr-lavender: #d5b3ff;
+  --clr-teal: #b6ffc0;
+  --clr-blue: #0000ff;
+}
+
+body {
+  font-size: 0.85rem;
+  font-family: "Poppins", sans-serif;
+}
