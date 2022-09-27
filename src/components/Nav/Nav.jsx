@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Logo from "../Logo";
 import "./Nav.css";
 import Triangle from "../Triangle";
+import NavComponents from "../Nav Components/NavComponents";
 
 const Nav = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -26,6 +27,7 @@ const Nav = () => {
           />
         </div>
       </nav>
+      <NavComponents isClicked={isClicked} />
     </header>
   );
 };
