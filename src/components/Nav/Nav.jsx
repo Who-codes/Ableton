@@ -1,11 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../Logo";
 import "./Nav.css";
 import Triangle from "../Triangle";
 import NavComponents from "../Nav Components/NavComponents";
+import MoreNav from "../MoreNav/MoreNav";
 
 const Nav = () => {
   const [isClicked, setIsClicked] = useState(false);
+
+  const [screenSize, setScreenSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const events = window.addEventListener("resize", () => {
+      setScreenSize(window.innerWidth);
+      if (screenSize >= 1200) {
+        setIsClicked(true);
+      }
+    });
+
+    return () => window, removeEventListener("resize", events);
+  }, [screenSize]);
 
   const handleClick = () => {
     setIsClicked(!isClicked);
@@ -13,8 +27,8 @@ const Nav = () => {
 
   return (
     <header>
-      <nav className="nav sm-nav">
-        <Logo className="logo" isClicked={isClicked} />
+      <nav className="nav">
+        <Logo className="logo" isClicked={isClicked} screenSize={screenSize} />
         <div
           className="menu-container"
           onClick={handleClick}
@@ -27,7 +41,8 @@ const Nav = () => {
           />
         </div>
       </nav>
-      <NavComponents isClicked={isClicked} />
+      <NavComponents isClicked={isClicked} screenSize={screenSize} />
+      {screenSize >= 1200 && <MoreNav />}
     </header>
   );
 };

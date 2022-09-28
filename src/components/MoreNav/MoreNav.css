@@ -1,0 +1,62 @@
+.more-list-container {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.more-on,
+.more-from {
+  margin-top: 1rem;
+}
+
+.more {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.more-title {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 1200px) {
+  .more {
+    grid-column: 1/-1;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .more-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .more-list-container {
+    flex-direction: row;
+  }
+
+  .more-on,
+  .more-from {
+    margin-top: 0;
+  }
+
+  .more-from {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .more {
+    font-size: 1.15rem;
+  }
+
+  .more-title {
+    font-size: 1.5rem;
+  }
+}
