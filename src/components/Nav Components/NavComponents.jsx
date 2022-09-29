@@ -11,7 +11,7 @@ const NavComponents = ({ isClicked, screenSize, showMore, handleMore }) => {
         className="main-list"
         divName="main-list-container flex"
       />
-      <h3 className="more-text" onClick={handleMore}>
+      <h3 className="more-text " onClick={handleMore}>
         More <span className="sign">{showMore ? "-" : "+"}</span>
       </h3>
       <MainNav

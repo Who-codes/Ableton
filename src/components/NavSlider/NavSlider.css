@@ -15,7 +15,8 @@
 
 .more-from-title {
   min-width: 200px;
-  font-weight: 500;
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -24,12 +25,21 @@
   }
 
   .more-from-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .more-from-desc {
+    line-height: 1.5rem;
   }
 }
 
 @media only screen and (min-width: 1300px) {
   .more-from-title {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
+  }
+
+  .more-from-desc {
+    line-height: 1.75rem;
   }
 }

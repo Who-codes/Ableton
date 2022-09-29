@@ -20,7 +20,7 @@
 .menu {
   font-weight: 500;
   letter-spacing: 1px;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
   cursor: pointer;
 }
 
@@ -36,16 +36,22 @@
 
 @media only screen and (min-width: 1200px) {
   header {
-    padding: 0 1rem;
+    padding: 1rem 1rem 0;
     display: grid;
+    gap: 1rem;
     grid-template-columns: 0.5fr repeat(3, 2fr);
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: 50px 1fr;
     place-items: center;
   }
 
   .nav {
     display: inline-block;
     grid-column: 1/2;
+    padding: 0;
+  }
+
+  .logo {
+    width: 60px;
   }
 
   .menu,

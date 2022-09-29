@@ -1,0 +1,20 @@
+.app {
+  background-color: #fff;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.line {
+  width: 100vw;
+  height: 2px;
+  border: none;
+  background-color: #eee;
+  z-index: -2;
+  position: absolute;
+}
+
+@media only screen and (min-width: 1200px) {
+  .line {
+    position: static;
+  }
+}
