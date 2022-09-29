@@ -2,11 +2,8 @@ import React, { useState } from "react";
 import MainNav from "../MainNav/MainNav";
 import "./NavComponents.css";
 import MoreNav from "../MoreNav/MoreNav";
-import { useGlobalContext } from "../../context";
 
-const NavComponents = ({ isClicked, screenSize }) => {
-  const { handleMore, showMore } = useGlobalContext();
-
+const NavComponents = ({ isClicked, screenSize, showMore, handleMore }) => {
   return (
     <div className={`nav-components ${isClicked && "item-position"}`}>
       <MainNav

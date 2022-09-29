@@ -7,6 +7,7 @@ import MoreNav from "../MoreNav/MoreNav";
 
 const Nav = () => {
   const [isClicked, setIsClicked] = useState(false);
+  const [showMore, setShowMore] = useState(false);
 
   const [screenSize, setScreenSize] = useState(window.innerWidth);
 
@@ -16,6 +17,10 @@ const Nav = () => {
       if (screenSize >= 1200) {
         setIsClicked(true);
       }
+
+      if (screenSize < 1200) {
+        setShowMore(true);
+      }
     });
 
     return () => window, removeEventListener("resize", events);
@@ -23,6 +28,10 @@ const Nav = () => {
 
   const handleClick = () => {
     setIsClicked(!isClicked);
+  };
+
+  const handleMore = () => {
+    setShowMore(!showMore);
   };
 
   return (
@@ -41,8 +50,13 @@ const Nav = () => {
           />
         </div>
       </nav>
-      <NavComponents isClicked={isClicked} screenSize={screenSize} />
-      {screenSize >= 1200 && <MoreNav />}
+      <NavComponents
+        isClicked={isClicked}
+        screenSize={screenSize}
+        showMore={showMore}
+        handleMore={handleMore}
+      />
+      {screenSize >= 1200 && showMore && <MoreNav />}
     </header>
   );
 };
